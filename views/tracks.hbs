@@ -3,11 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>tracks</title>
-    <script id="entry-template" type="text/x-handlebars-template">
+    <script type="text/x-handlebars-template">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    {{#each music}}
-    <p> the track is{{tracks}}, by {{artist}} it sounds like {{element}}
-      {{/each}} </p>
+    <div id="music">
+        {{#each tracks}}
+          <h1>{{music.name}} {{artist}}</h1>
+            {{/each}}
+    </div>
+
+    <script src="index.js"></script>
   </body>
 </html>

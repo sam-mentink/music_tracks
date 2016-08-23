@@ -1,13 +1,20 @@
 var db = require('./db')
+var test = require('./views/test')
+// var test = require('./linkTrack')
+///////////////////////////////
+var express = require('express')
+
+//////////////////////////////
 
 module.exports = {
   index: index,
   linkTrack: linkTrack,
-  tracks: tracks
+  tracks: tracks,
+  test: test
 }
 
 function index (req, res) {
-  res.send('music to my ears')
+  res.send('music squireel')
 }
 
 function linkTrack (req, res) {
@@ -37,3 +44,19 @@ function tracks (req, res) {
       console.log(err)
     })
 }
+
+
+function test (req, res) {
+  return hello
+}
+
+// function get (req, res) {
+//   knex('test')
+//     .select()
+//     .then(function (test) {
+//       res.json({id:  name: 'Better Users'})
+//     })
+//     .catch(function (err) {
+//       res.status(200).send('DATABASE ERROR: ' + err.message)
+//     })
+// }

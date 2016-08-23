@@ -3,7 +3,8 @@ var knex = require('knex')(development)
 
 module.exports = {
  linkTrack: linkTrack,
- tracks: tracks
+ tracks: tracks,
+ test: test
 }
 
 function linkTrack () {
@@ -14,6 +15,11 @@ function linkTrack () {
 }
 
 function tracks () {
+  return knex('music')
+  .select('music.id')
+}
+
+function test () {
   return knex('music')
   .select('music.id')
 }

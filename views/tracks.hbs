@@ -3,16 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>tracks</title>
-    <script type="text/x-handlebars-template">
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
+    <!-- <script type="text/x-handlebars-template"> -->
     <div id="music">
         {{#each tracks}}
-          <h1>{{music.name}} {{artist}}</h1>
+          <h1>{{name}}    {{artist}}</h1>
             {{/each}}
     </div>
 
+    <div id="tune_stuff">
+        {{#each tune_stuff}}
+          <h1>{{element}}</h1>
+            {{/each}}
+    </div>
     <script src="index.js"></script>
   </body>
 </html>

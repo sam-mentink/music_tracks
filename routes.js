@@ -14,7 +14,7 @@ module.exports = {
 }
 
 function index (req, res) {
-  res.send('music squireel')
+  res.send('music squirell')
 }
 
 function linkTrack (req, res) {
@@ -47,7 +47,7 @@ function tracks (req, res) {
 
 
 function test (req, res) {
-  return hello
+  res.render('tracks')
 }
 
 // function get (req, res) {

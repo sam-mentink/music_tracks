@@ -16,10 +16,16 @@ function linkTrack () {
 
 function tracks () {
   return knex('music')
-  .select('music.id')
+  // .join('tune_stuff, tune_stuff.id, '=', 'tune_stuff.element')
+  .select('music.name', 'music.artist')
+  // .select('tune_stuff.id')
 }
 
 function test () {
   return knex('music')
   .select('music.id')
 }
+
+
+/////////////
+//  .select('music.name')

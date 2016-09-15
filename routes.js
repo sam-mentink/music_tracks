@@ -10,7 +10,8 @@ module.exports = {
   index: index,
   linkTrack: linkTrack,
   tracks: tracks,
-  test: test
+  test: test,
+  things: things
 }
 
 function index (req, res) {
@@ -45,10 +46,25 @@ function tracks (req, res) {
     })
 }
 
-
-function test (req, res) {
-  res.render('tracks')
+function things (req, res) {
+  db.things()
+    .then(function (data) {
+      var music = {
+        things: data
+      }
+      console.log (data)
+      res.render('things', music)
+    })
+    .catch(function (err) {
+      res.sendStatus(500)
+      console.log(err)
+    })
 }
+
+
+// function test (req, res) {
+//   res.render('tracks')
+// }
 
 // function get (req, res) {
 //   knex('test')

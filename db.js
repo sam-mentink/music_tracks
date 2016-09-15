@@ -4,7 +4,7 @@ var knex = require('knex')(development)
 module.exports = {
  linkTrack: linkTrack,
  tracks: tracks,
- test: test
+ things: things
 }
 
 function linkTrack () {
@@ -21,11 +21,16 @@ function tracks () {
   // .select('tune_stuff.id')
 }
 
-function test () {
+function things () {
   return knex('music')
-  .select('music.id')
+  .join('things', 'things.music_id', '=', 'music.id')
+  .select('music.name', 'things.element_id as thing_element_id')
+  .join('tune_stuff', 'tune_stuff.element_id', '=', 'thing_element_id')
+  .select('music.name as name', 'tune_stuff.element as element')
+  .orderBy('music.name')
 }
 
 
-/////////////
-//  .select('music.name')
+
+// .join('breeds', 'dogs.breed_id', '=', 'breeds.id')
+// .select('dogs.name', 'breeds.name as breed')

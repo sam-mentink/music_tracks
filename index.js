@@ -6,6 +6,7 @@ var routes = require('./routes')
 var db = require('./db')
 var test = require('./views/test')
 var tracks = require('./views/tracks')
+var things = require('./views/things')
 
 app.use(bodyParser.urlencoded())
 app.use(express.static('public'))
@@ -18,6 +19,7 @@ app.set('views', __dirname + '/views')
 app.get('/', routes.index)
 // app.get('/linktrack', routes.linkTrack)
 app.get('/tracks', routes.tracks)
+app.get('/things', routes.things)
 app.get('/test', routes.test)
 ///////////////////////////
 

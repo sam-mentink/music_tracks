@@ -26,11 +26,6 @@ function things () {
   .join('things', 'things.music_id', '=', 'music.id')
   .select('music.name', 'things.element_id as thing_element_id')
   .join('tune_stuff', 'tune_stuff.element_id', '=', 'thing_element_id')
-  .select('music.name as name', 'tune_stuff.element as element')
+  .select('music.name as name', 'tune_stuff.element as element', 'music.artist as artist')
   .orderBy('music.name')
 }
-
-
-
-// .join('breeds', 'dogs.breed_id', '=', 'breeds.id')
-// .select('dogs.name', 'breeds.name as breed')

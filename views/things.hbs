@@ -3,24 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>things</title>
-
-    <link rel="stylesheet" href="./style.css">
-
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/skeleton.css">
   </head>
+
   <body>
     <div id="things">
         {{#each things}}
-          <h1>{{name}} >>>>>>> {{element}}</h1>
+          <h1>{{name}} >>>>>>> {{artist}}</h1>
+            {{/each}}
+    </div>
+
+    <div id="things">
+        {{#each things}}
+          <button>{{element}}</button>
             {{/each}}
     </div>
 
 <style>
 
-background-color: blue,
-/*.h1 {
-  font-size: 20px;
-  text-decoration-color: black;
-}*/
 </style>
     </div>
     <script src="index.js"></script>

@@ -9,20 +9,17 @@
   </head>
 
   <body>
-    <div id="things">
-        {{#each things}}
-          <h1>{{name}} >>>>>>> {{artist}}</h1>
+    hello
+    <div id="element">
+        {{#each elements}}
+    <h1>  {{element}} {{name}}</h1>
+      <h1>  {{tune_stuffID}} </h1>
             {{/each}}
     </div>
 
-    <div id="things">
-      <h1> {{name}} </h1> </div>
-
-    <div id="things">
-        {{#each things}}
-          <button> {{element}}</button>
-            {{/each}}
-    </div>
+    {{#each elements}}
+<li><a href="/element/{{elementID}}">{{date}} {{bandName}} {{venueName}}</a> </li>
+{{/each}}
 
 <style>
 

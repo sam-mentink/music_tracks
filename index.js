@@ -18,9 +18,9 @@ app.set('views', __dirname + '/views')
 ///////////////////////////
 app.get('/', routes.index)
 // app.get('/linktrack', routes.linkTrack)
-app.get('/tracks', routes.tracks)
 app.get('/things', routes.things)
 app.get('/test', routes.test)
+app.get('/element', routes.elementshow)
 ///////////////////////////
 
 var PORT = 3000

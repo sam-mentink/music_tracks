@@ -8,7 +8,8 @@ module.exports = {
   index: index,
   test: test,
   things: things,
-  elementshow: elementshow
+  elementshow: elementshow,
+  formatElements: formatElements
 }
 
 function index (req, res) {
@@ -38,6 +39,7 @@ function elementshow (req, res) {
         formatted: data
       }
       res.render('elementshow', vm)
+      console.log(data)
     })
     .catch(function (err) {
       res.sendStatus(500)
@@ -45,28 +47,61 @@ function elementshow (req, res) {
     })
   }
 
-function formatElements (data) {
+  function formatElements (data) {
   var formatted = []
-  for(let i = 0; i < data.length; i++) {
-    if (!formatted.find(function (song) {
-      // ... song name IS data[i].name
-    })) {
-      // create song in formatted
+  var addedNames = {}
 
+  for(var i = 0; i < data.length; i++) {
+    var crt = data[i]
+    var index = addedNames[crt.name]
+
+    if(index !== undefined) {
+        formatted[index].element.push(crt.element)
     } else {
-      // find the song in formatted
-      // push data[i].element into song.elements
+        addedNames[crt.name] = formatted.length
+        formatted.push({
+            name: crt.name,
+            element: [crt.element]
+        })
     }
   }
   return formatted
 }
 
 
-
-
-
+// function formatElements (data) {
+//   var formatted = []
+//   for(let i = 0; i < data.length; i++) {
+//     if (!formatted.find(function (song) {
+//       // ... song name IS data[i].name
+//     })) {
+//       // create song in formatted
+//
+//     } else {
+//       // find the song in formatted
+//       // push data[i].element into song.elements
+//     }
+//   }
+//   return formatted
 // }
-// for (x in formatted) {
-//   out.push(x);
+
+// function formatElements (data) {
+// var formatted = [];
+// var addedNames = {};
+//
+// for(var i = 0; i < data.length; i++) {
+//   var crt = data[i];
+//   var index = addedNames[crt.name];
+//
+//   if(index !== undefined) {
+//       formatted[index].element.push(crt.element);
+//   } else {
+//       addedNames[crt.name] = formatted.length;
+//       formatted.push({
+//           name: crt.name,
+//           element: [crt.element]
+//       });
+//   }
 // }
-// return fomatted
+// return formatted;
+// }

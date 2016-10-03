@@ -31,7 +31,7 @@ function things (req, res) {
 }
 
 function elementshow (req, res) {
-  db.things()
+  db.things(req.params)
     .then(function(data) {
     vm = {
       elements: data

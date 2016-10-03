@@ -3,22 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>things</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <!-- <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/skeleton.css"> -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/skeleton.css">
   </head>
 
   <body>
-    hello
-    <div id="element">
-        {{#each elements}}
-    <h1>  {{element}} {{name}}</h1>
-      <h1>  {{tune_stuffID}} </h1>
-            {{/each}}
+    hello //////////
+    <div class="element">
+        {{#each element}}
+          <h5>{{name}}</h5>
+          <h5>{{element}}</h5>
+        {{/each}}
     </div>
 
-    {{#each elements}}
-<li><a href="/element/{{elementID}}">{{date}} {{bandName}} {{venueName}}</a> </li>
+        {{#each element}}
+    <button>{{element}}</button>
 {{/each}}
 
 <style>

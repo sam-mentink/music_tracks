@@ -21,7 +21,7 @@ function things (req, res) {
       vm = {
         things: data
       }
-      console.log (data)
+      // console.log (data)
       res.render('things', vm)
     })
     .catch(function (err) {
@@ -33,10 +33,10 @@ function things (req, res) {
 function elementshow (req, res) {
   db.things()
     .then(function(data) {
-    vm = {
-      elements: data
-    }
-    console.log (data)
+      var formatted = formatElements(data)
+      vm = {
+        formatted: data
+      }
       res.render('elementshow', vm)
     })
     .catch(function (err) {
@@ -44,3 +44,29 @@ function elementshow (req, res) {
       console.log(err)
     })
   }
+
+function formatElements (data) {
+  var formatted = []
+  for(let i = 0; i < data.length; i++) {
+    if (!formatted.find(function (song) {
+      // ... song name IS data[i].name
+    })) {
+      // create song in formatted
+
+    } else {
+      // find the song in formatted
+      // push data[i].element into song.elements
+    }
+  }
+  return formatted
+}
+
+
+
+
+
+// }
+// for (x in formatted) {
+//   out.push(x);
+// }
+// return fomatted

@@ -36,10 +36,10 @@ function elementshow (req, res) {
     .then(function(data) {
       var formatted = formatElements(data)
       vm = {
-        formatted: data
+        formatted: formatted
       }
       res.render('elementshow', vm)
-      console.log(data)
+
     })
     .catch(function (err) {
       res.sendStatus(500)
@@ -65,6 +65,11 @@ function elementshow (req, res) {
         })
     }
   }
+  var joined = formatted.map(function (obj) {
+    obj.classes = obj.element.join(' ')
+    return obj
+  })
+  console.log(joined)
   return formatted
 }
 

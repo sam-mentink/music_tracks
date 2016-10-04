@@ -9,7 +9,7 @@ module.exports = {
 function things () {
   return knex('music')
   .join('things', 'things.music_id', '=', 'music.id')
-  .join('tune_stuff', 'tune_stuff.element_id', '=', 'thing_element_id')
+  .join('tune_stuff', 'tune_stuff.element_id', '=', 'things.element_id')
   .select('music.name as name', 'tune_stuff.element as element', 'music.artist as artist')
   .orderBy('music.name')
 }

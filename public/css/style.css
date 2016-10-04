@@ -3,29 +3,48 @@ body {
 }
 
 button {
-  width: 87px;
-  text-align: center;
+  width: 86px;
   margin: auto;
+  margin-right: 10px;
 
 }
 
 .portfolioFilter a {
-  /*margin-right: 2px;*/
+
 	color:#666;
 	text-decoration:none;
 }
 
 .portfolioContainer {
-  width: 900px;
-  height: 1000px;
+
+}
+.overlordb {
+  width: 880px;
+  height: 135px;
   margin: auto;
   border: black;
   border-style: solid;
-  border-width: 2px;
+  border-width: 1px;
+  border-color: grey;
+  margin-bottom: 0px;
+  margin-top: 50px;
+  font-size: 90px;
+  text-align: center;
+}
+
+.overlord {
+  width: 880px;
+  height: 235px;
+  margin: auto;
+  border: black;
+  border-style: solid;
+  border-width: 1px;
   border-color: grey;
   margin-bottom: 5px;
   margin-top: 50px;
 }
+
+
 
 .portfolioFilter a.current {
     font-weight:bold;
@@ -35,6 +54,7 @@ button {
   width: 900px;
   height: 50px;
   margin: auto;
+  margin-top: 30px;
 }
 
 img {

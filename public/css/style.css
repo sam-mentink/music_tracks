@@ -3,18 +3,20 @@ body {
 }
 
 button {
-  width: 140px;
+  width: 87px;
+  text-align: center;
   margin: auto;
+
 }
 
 .portfolioFilter a {
-  margin-right: 2px;
+  /*margin-right: 2px;*/
 	color:#666;
 	text-decoration:none;
 }
 
 .portfolioContainer {
-  width: 1000px;
+  width: 900px;
   height: 1000px;
   margin: auto;
   border: black;
@@ -30,8 +32,8 @@ button {
 }
 
 .portfolioFilter {
-  width: 1000px;
-  height: 100px;
+  width: 900px;
+  height: 50px;
   margin: auto;
 }
 

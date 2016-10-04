@@ -29,7 +29,22 @@ exports.seed = function(knex, Promise) {
         knex('things').insert({id: 23, music_id: 27, element_id: 14}),
         knex('things').insert({id: 24, music_id: 22, element_id: 15}),
         knex('things').insert({id: 25, music_id: 30, element_id: 16}),
-        knex('things').insert({id: 26, music_id: 30, element_id: 17})
+        knex('things').insert({id: 26, music_id: 30, element_id: 17}),
+        knex('things').insert({id: 27, music_id: 32, element_id: 11}),
+        knex('things').insert({id: 28, music_id: 33, element_id: 12}),
+        knex('things').insert({id: 29, music_id: 33, element_id: 13}),
+        knex('things').insert({id: 30, music_id: 34, element_id: 14}),
+        knex('things').insert({id: 31, music_id: 35, element_id: 15}),
+        knex('things').insert({id: 32, music_id: 36, element_id: 16}),
+        knex('things').insert({id: 33, music_id: 37, element_id: 17}),
+        knex('things').insert({id: 34, music_id: 38, element_id: 14}),
+        knex('things').insert({id: 35, music_id: 39, element_id: 15}),
+        knex('things').insert({id: 36, music_id: 40, element_id: 16}),
+        knex('things').insert({id: 37, music_id: 38, element_id: 17}),
+        knex('things').insert({id: 38, music_id: 37, element_id: 14}),
+        knex('things').insert({id: 39, music_id: 35, element_id: 15}),
+        knex('things').insert({id: 40, music_id: 32, element_id: 16}),
+        knex('things').insert({id: 41, music_id: 31, element_id: 17}),
       ]);
     });
 };

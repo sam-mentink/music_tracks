@@ -32,7 +32,7 @@ function things (req, res) {
 }
 
 function elementshow (req, res) {
-  db.things()
+  db.things(req.params)
     .then(function(data) {
       var formatted = formatElements(data)
       vm = {

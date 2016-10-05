@@ -13,13 +13,15 @@
 
   <body>
 
-<div class="overlordb">-|+  [O]   ||+++||+++||   [O]  -|+</div>
+<div class="overlordb">-|+  [.O|]   ||+++||+++||   [.O|]  -|+</div>
 
   <div class="overlord">
     <div class="portfolioContainer">
         {{#each formatted}}
-          <div class="{{classes}}" >
-           <img src="../image/randomer.jpg" width="100" height="100"><div> </div> </div>
+          <div class="{{classes}}">
+            <div class="name">{{name}}</div>
+            <img src="../image/randomer.jpg" width="100" height="100">
+          </div>
         {{/each}}
     </div>
   </div>
@@ -53,6 +55,7 @@
       $('.portfolioFilter a').click(function(){
           $('.portfolioFilter .current').removeClass('current');
           $(this).addClass('current');
+
 
           var selector = $(this).attr('data-filter');
           $container.isotope({

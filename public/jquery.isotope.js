@@ -230,21 +230,21 @@
       set: function( elem, value ) {
 
         // uncomment this bit if you want to properly parse strings
-        // if ( typeof value === 'string' ) {
-        //   value = value.split(' ');
-        // }
-        //
-        // var i, val;
-        // for ( i = 0; i < 2; i++ ) {
-        //   val = value[i];
-        //   if ( typeof val === 'string' ) {
-        //     val = parseInt( val );
-        //   }
-        // }
+        if ( typeof value === 'string' ) {
+          value = value.split(' ');
+        }
+
+        var i, val;
+        for ( i = 0; i < 2; i++ ) {
+          val = value[i];
+          if ( typeof val === 'string' ) {
+            val = parseInt( val );
+          }
+        }
 
         setIsoTransform( elem, 'translate', value );
       },
-
+      //---------------------------------------------------//
       get: function( elem, computed ) {
         var transform = $.data( elem, 'isoTransform' );
         return transform && transform.translate ? transform.translate : [ 0, 0 ];

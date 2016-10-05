@@ -22,15 +22,13 @@
       </div>
 
     <div class="portfolioContainer">
-        {{#each formatted}}
-        <li>  <div class>{{ classes}} alt="hello">
-            <div class>{{name}}</div>
-          </div> </li>
-
+      {{#each formatted}}
+          <div class>
+            {{ classes}}
+          <li>{{name}}</li>
+        </div>
         {{/each}}
-
-    </div>
-
+      </div>
     <script type="text/javascript">
 
   $(window).load(function(){

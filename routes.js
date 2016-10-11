@@ -1,6 +1,7 @@
 var db = require('./db')
 var test = require('./views/test')
 var express = require('express')
+var auth = require('auth')
 
 //////////////////////////////
 
@@ -13,7 +14,7 @@ module.exports = {
 }
 
 function index (req, res) {
-    res.render('index') 
+    res.render('index')
 }
 
 function things (req, res) {

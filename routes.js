@@ -13,7 +13,7 @@ module.exports = {
 }
 
 function index (req, res) {
-  res.send('music squirell')
+    res.render('index') 
 }
 
 function things (req, res) {

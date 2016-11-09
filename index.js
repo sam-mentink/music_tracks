@@ -16,7 +16,7 @@ app.set('view engine', 'hbs')
 app.set('views', __dirname + '/views')
 
 ///////////////////////////
-app.get('/', routes.index)
+app.get('/', routes.elementshow)
 // app.get('/linktrack', routes.linkTrack)
 app.get('/things', routes.things)
 app.get('/test', routes.test)
